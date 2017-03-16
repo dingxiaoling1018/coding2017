@@ -30,18 +30,7 @@ public class ArrayList implements List {
 		elementData[size] = o;
 		size++;
 	}
-	public void add(int index, Object o){
-		if(index <0 || index >= size){
-			throw new IllegalArgumentException("数组越界");
-		}
-		if (size >= capacity){
-			enlargeCapacity();
-		}
-		System.arraycopy(elementData, index, elementData, index+1, size - index);
-		elementData[index] = o;
-		size++;
-	}
-	
+
 	public Object get(int index){
 		if(index <0 || index >= size){
 			throw new IllegalArgumentException("数组越界");
